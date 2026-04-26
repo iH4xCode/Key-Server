@@ -23,8 +23,7 @@ ALLOWED_HWIDS = set([
 
 
 def generate_runtime_key(hwid: str) -> str:
-    time_window = int(time.time() // 60)
-    seed = f"{hwid}:{time_window}:{SECRET}"
+    seed = f"{hwid}:{SECRET}"
     return hashlib.sha256(seed.encode()).hexdigest()[:16]
 
 
