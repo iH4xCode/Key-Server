@@ -18,7 +18,7 @@ ADMIN_SECRET = os.getenv("ADMIN_SECRET", "CHANGE_ADMIN_SECRET")
 # =======================================
 
 KEY_TTL = 60
-DB_FILE = "licenses.db"
+DB_FILE = "/data/licenses.db"
 
 
 # ================= DATABASE =================
