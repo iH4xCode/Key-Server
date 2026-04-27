@@ -59,7 +59,7 @@ def db_execute(query, params=(), fetchone=False, fetchall=False):
 
 # 🔐 Stable key (no rotation)
 def generate_runtime_key(hwid: str) -> str:
-    seed = f"{hwid}:{SECRET}"
+    seed = f"{SECRET}"
     return hashlib.sha256(seed.encode()).hexdigest()[:16]
 
 
